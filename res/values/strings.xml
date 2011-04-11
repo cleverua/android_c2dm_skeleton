@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">C2DM_Skeleton</string>
+    
+    <string name="register_btn">Register to C2DM</string>
+    <string name="unregister_btn">Unregister from C2DM</string>
+    
+    <string name="message_alert">Got message!</string>
+    <string name="registered_msg">Registered successfully!</string>
+    <string name="unregistered_msg">Unregistered!</string>
+</resources>
