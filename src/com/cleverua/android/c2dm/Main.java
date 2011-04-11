@@ -21,7 +21,7 @@ public class Main extends Activity {
     public static final String C2DM_POST_ACTION = "c2dm_post_action";
    
   //put your account here. You may sign up the application at http://code.google.com/android/c2dm/signup.html
-    private static final String ACCOUNT = "vortex_rs@mail.ru"; 
+    private static final String ACCOUNT = ""; 
     
     private static final int C2DM_RESULT_DIALOG = 100;
 

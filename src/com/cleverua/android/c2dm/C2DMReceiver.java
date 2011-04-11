@@ -71,23 +71,12 @@ public class C2DMReceiver extends C2DMBaseReceiver {
 	        Log.d(key, intent.getStringExtra(key));
 	    }
         String message = intent.getStringExtra(MESSAGE_KEY);
-        String promotionId = intent.getStringExtra(ITEM_ID_KEY);
+        String itemId = intent.getStringExtra(ITEM_ID_KEY);
         if (message != null) {
-            if (promotionId == null) {
-                /* Multiple promotions update. So we need to show or refresh the Categories activity.
-                 * 
-                 * notificationIntent.setClass(context, CategoriesActivity.class);
-                 * notificationIntent.putExtra(BaseActivity.REFRESH, true);
-                 * 
-                 */
+            if (itemId == null) {
+                /* Multiple items update for example. */
             } else {
-                /* Single promotion update. So we need to show the Promotion Details activity and pass 
-                 * the promotionId as string extra.
-                 *  
-                 * notificationIntent.setClass(this, PromotionDetailsActivity.class);
-                 * notificationIntent.putExtra(PromotionDetailsActivity.PROMOTION_ID, promotionId);
-                 *  
-                 */
+                /* Single item update for example.*/
             }
             /* In this example we will only display the message on the Main activity.*/
             Intent notificationIntent = new Intent(this, Main.class);
