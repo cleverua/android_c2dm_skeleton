@@ -11,9 +11,9 @@ Store an account ("Role account email") somewhere in your application. You will 
 
   private static final String ACCOUNT = "skeleton@sample.com";
 
-=== Obtain the registration Id to use the messaging service
+=== Obtain the registration ID to use the messaging service
 
-Application needs the registration ID that allows it to receive messages for a particular device. You may get the registration Id
+Application needs the registration ID that allows it to receive messages for a particular device. You may get the registration ID
 with C2DMessaging class. Use C2DMessaging.register(Context context, String account) method  passing the current context and the application 
 account as parameters. 
 
@@ -23,7 +23,7 @@ account as parameters.
 
   ...
 
-After registration succeeds the registration Id will be stored. Use C2DMessaging.getRegistrationId(Context context) method to get the registration Id.
+After registration succeeds the registration ID will be stored. Use C2DMessaging.getRegistrationId(Context context) method to get the registration ID.
 
   ...
 
@@ -42,11 +42,11 @@ You may handle the registration and messaging by redefining the C2DMReceiver cla
 * public void onError(Context context, String errorId) - on error occured during the registration process
 * protected void onMessage(Context context, Intent intent) - on message incoming
 
-=== Send the registration Id to your application server.
+=== Send the registration ID to your application server.
 
 The registration ID lasts until the application explicitly unregisters itself, or until Google refreshes the registration ID for your application.
 The third-party application server stores the registration ID and uses it to identify the particular device. So it is very important to send the recent 
-registration Id to application server if you want to receive C2DM messages.
+registration ID to application server if you want to receive C2DM messages.
 
 
 == EXAMPLES
