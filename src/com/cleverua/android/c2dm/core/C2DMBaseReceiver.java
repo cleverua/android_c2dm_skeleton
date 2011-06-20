@@ -24,6 +24,8 @@ import android.content.Intent;
 import android.os.PowerManager;
 import android.util.Log;
 
+import com.cleverua.android.c2dm.C2DMReceiver;
+
 /**
  * Base class for C2D message receiver. Includes constants for the
  * strings used in the protocol.
@@ -137,10 +139,7 @@ public abstract class C2DMBaseReceiver extends IntentService {
         }
         mWakeLock.acquire();
 
-        // Use a naming convention, similar with how permissions and intents are 
-        // used. 
-        String receiver = context.getPackageName() + ".C2DMReceiver";
-        intent.setClassName(context, receiver);
+        intent.setClass(context, C2DMReceiver.class);
         
         context.startService(intent);
 
